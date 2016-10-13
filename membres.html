@@ -1,0 +1,17 @@
+---
+layout: default
+title: Membres
+navigation_weight: 3
+---
+
+<section class="section">
+  <div class="container">
+    <ul>
+    {% for member in site.data.members %}
+      <li>
+        {{ member.name }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>

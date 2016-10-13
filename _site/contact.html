@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.1/css/bulma.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<body>
+
+  <header class="nav">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item">
+          <img src="/images/logo.png" alt="Logo">
+        </a>
+      </div>
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="nav-right nav-menu">
+
+        
+        
+          
+        
+          
+        
+          
+              <a href="/" class="nav-item " >
+                Accueil
+              </a>
+          
+        
+          
+              <a href="/promotions/" class="nav-item " >
+                Promotions
+              </a>
+          
+        
+          
+              <a href="/membres.html" class="nav-item " >
+                Membres
+              </a>
+          
+        
+          
+              <a href="/food.html" class="nav-item " >
+                Foods
+              </a>
+          
+        
+          
+              <a href="/contact.html" class="nav-item is-active" >
+                Contact
+              </a>
+          
+        
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+      <section class="section">
+  <div class="container">
+    <form id="contact-form" method="post" action="/success.html">
+      <label class="label">Email Address</label>
+      <div class="control">
+        <input data-validation="email" class="input" type="text" name="email">
+      </div>
+
+
+      <label class="label" >Name</label>
+      <div class="control">
+        <input data-validation="length" data-validation-length="min5" class="input" type="text" name="name">
+      </div>
+
+
+      <label class="label">Message</label>
+      <div class="control">
+        <textarea class="textarea" name="message"></textarea>
+      </div>
+
+      <div class="control">
+        <label class="c-checkbox">Urgent</label>
+        <input type="checkbox" name="urgent">
+      </div>
+
+      <label class="label">Type of Enquiry</label>
+      <div class="control">
+
+        <input class="radio" type="radio" name="_subject" value="Sales Enquiry"> Sales
+        <input class="radio" type="radio" name="_subject" value="General Enquiry"> General
+      </div>
+
+      <input type="hidden" name="_to" value="fgaudin@agencearchipel.com">
+      <!-- <input type="hidden" name="_cc" value="sales.tracker@example.com"> -->
+      <!-- <input type="text" name="_gotcha" style="display: none;"> -->
+
+      <input class="button is-primary" type="submit" value="Send Message">
+    </form>
+  </div>
+</section>
+
+<!-- Docs http://www.formvalidator.net/index.html -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+<script>
+  $.validate();
+</script>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          © 2016 Archipel Synergie Créative. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+---
+layout: default
+title: Promotions
+section: promotions
+navigation_weight: 2
+---
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-quarter">
+        <figure class="image editable">
+          {% assign promotion = site.data.ads.promotions[page.section] %}
+          <a href="{{ promotion.link }}">
+            <img src="{{ site.file.path }}/images/{{ promotion.photo }}">
+          </a>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

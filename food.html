@@ -1,0 +1,180 @@
+---
+layout: default
+title: Foods
+navigation_weight: 4
+---
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Groups</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            id
+          </th>
+          <th>
+            group
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for foodsgroups in site.data.foods.foodgroupsEn.foodgroups %}
+          <tr>
+            <td>
+              {{ foodsgroups.fgid }}
+            </td>
+            <td>
+              {{ foodsgroups.foodgroup }}
+
+              <table style="margin-top: 20px;" class="table is-bordered is-striped is-narrow">
+                <thead>
+                  <tr>
+                    <th>
+                      cat id
+                    </th>
+                    <th>
+                      cat
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for categorie in foodsgroups.categories %}
+                    <tr>
+                      <td>
+                        {{ categorie.fgcat_id }}
+                      </td>
+                      <td>
+                        {{ categorie.fgcat }}
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Directional Satements</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            id
+          </th>
+          <th>
+            stmt
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ds in site.data.foods.directionalSatements.directional_statements %}
+          <tr>
+            <td>
+              {{ ds.fgid }}
+            </td>
+            <td>
+              {{ ds.dir_stmt }}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Serving per Day</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            id
+          </th>
+          <th>
+            gender
+          </th>
+          <th>
+            ages
+          </th>
+          <th>
+            serving
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for serving in site.data.foods.servingsPerDay.servingsToPerToMiy %}
+          <tr>
+            <td>
+              {{ serving.fgid }}
+            </td>
+            <td>
+              {{ serving.gender }}
+            </td>
+            <td>
+              {{ serving.ages }}
+            </td>
+            <td>
+              {{ serving.servings }}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <h2 class="title is-4">Food</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                id
+              </th>
+              <th>
+                category
+              </th>
+              <th>
+                quantity
+              </th>
+              <th>
+                aliment
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for foods in site.data.foods.foodsEn.foods %}
+              <tr>
+                <td>
+                  {{ foods.fgid }}
+                </td>
+                <td>
+                  {{ foods.fgcat_id }}
+                </td>
+                <td>
+                  {{ foods.srvg_sz }}
+                </td>
+                <td>
+                  {{ foods.food }}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</section>
